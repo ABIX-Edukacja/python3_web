@@ -208,11 +208,11 @@ function addModal() {
 
 function runCode() {
     Sk.main_canvas = document.createElement("canvas");
-    
+
     Sk.quitHandler = function () {
         $('.modal').modal('hide');
     };
-        
+
     var prog = ace.edit("editor").getValue();
 
     if (prog.includes("import pygame")) {
@@ -241,6 +241,10 @@ $(document).ready(function() {
 
     (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
     Sk.configure({
+        inputfun: function (prompt) {
+        return window.prompt(prompt);
+    },
+        inputfunTakesPrompt: true,
         read: builtinRead,
         output: printString,
         __future__: Sk.python3
@@ -249,7 +253,7 @@ $(document).ready(function() {
         runCode();
     });
 
-    
+
     var sourcePath = mainPath+"00_empty.py";
     if (window.location.search.substring(1).length > 0) {
         sourcePath = mainPath + window.location.search.substring(1)
@@ -264,7 +268,7 @@ $(document).ready(function() {
     $.ajax({
         url: instructionSourcePath,
         type: 'GET',
-        success: function(data){ 
+        success: function(data){
             data = md.render(data)
             $('#instruction').html(data);
         },
