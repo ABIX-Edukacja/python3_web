@@ -19,20 +19,21 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 
     <style>
         #editor {
             min-height: 300px;
             height: auto;
             max-height: 60%;
-            font-size: 2rem;
+            font-size: 1.3rem;
         }
         pre {
-            font-size: 1.7rem;
+            font-size: 1.2rem;
         }
         #instruction {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
     </style>
 
@@ -92,7 +93,7 @@
 </head>
 <body>
 
-    <div class="container-fluid">
+<div class="container-fluid">
         <div class="py-2 w-100 text-left">
 	    &nbsp;<br>
         <div class="photo-container">
@@ -103,80 +104,83 @@
         <a href="https://pracowniainformatyczna.pl" target="_blank"><img src="./free_server_fb.jpg" height="149" alt="logo"><span>Pracownia informatyczna dla szkół</span></a>
  <hr>
         </div>
-        <div class="row h-100">
-            <div class="col-lg-9 col-12" style="min-height: 50vh">
-                <div class="row">
-                    <div class="col-lg-6 col-12 h-100">
-			            <h4>Edytor - tu wpisujesz swój kod:</h4>
-                        <div id="editorsplace" class="h-100">
-                            <pre id="editor" style="border: 1px solid black;"></pre>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12" style="min-height: 50vh">
-                        <h4>Mycanvas - tu zobaczysz efekty działania:</h4>
-                        <div id="mycanvas"></div>
-                        <pre class="text-left h-100">
-                            <code id="output">&nbsp;</code>
-                        </pre>
-                    </div>
+</div>
+</div>
+<div class="container">
+    <div class="row h-100">
+        <div class="col-lg-6 col-12 h-100" style="min-height: 50vh">
+			<h4>Edytor - tu wpisujesz swój kod:</h4>
+            <div id="editorsplace" class="h-100">
+                <pre id="editor" style="border: 1px solid black;"></pre>
+            </div>
+            <div class="w-100 text-right mt-2">
+                <button class="btn btn-primary text-light" id="runbutton">Wykonaj aktualny kod <i class="fa fa-play" aria-hidden="true"></i></button>
+                <div class="btn-group">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-small btn-default dropdown-toggle" data-toggle="dropdown">
+                            Wybierz zadanie (Plik)
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-link">
+                                <a href="?00_empty.py">Przykładowy plik</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="?00_start_python3.py">Zupełnie pusty szablon</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="?sp_print_01.py">SP - podstawowy print</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="?sp_zmienne_01.py">SP - podstawowe zmienne i typy</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="?sp_choinka.py">SP - wykorzystujemy pętlę do rysowania</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="?sp_prostokat_01.py">SP - podstawowe wczytujemy dane z klawiatury i obliczamy</a>
+                            </li>
+                            <li class="dropdown-link">
+                                <a href="?sp_turtle_01.py">SP - grafika żółwia (turtle)</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end of btn-group -->
                 </div>
-            </div>
-            <div class="col-lg-3 col-12" style="min-height: 50vh">
-                <div id="instruction"></div>
+            </div> <!-- end of buttons -->
+        </div> <!-- end of col -->
 
-
-            </div>
+        <div class="col-lg-6 col-12" style="min-height: 50vh">
+            <h4>Mycanvas - tu zobaczysz efekty działania:</h4>
+            <div id="mycanvas"></div>
+            <pre class="text-left h-100">
+                <code id="output">&nbsp;</code>
+            </pre>
         </div>
+    </div> <!-- end of row -->
 
-
-        <div class="w-100 text-center">
-            <button class="btn btn-primary text-light" id="runbutton">Wykonaj aktualny kod <i class="fa fa-play" aria-hidden="true"></i></button>
-            <div class="btn-group">
-                <div class="btn-group dropup">
-                    <button type="button" class="btn btn-small btn-default dropdown-toggle" data-toggle="dropdown">
-                        Wybierz zadanie (Plik)
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-link">
-                            <a href="?00_empty.py">Przykładowy plik</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?00_start_python3.py">Zupełnie pusty szablon</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_print_01.py">SP - podstawowy print</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_zmienne_01.py">SP - podstawowe zmienne i typy</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_choinka.py">SP - wykorzystujemy pętlę do rysowania</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_prostokat_01.py">SP - podstawowe wczytujemy dane z klawiatury i obliczamy</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_turtle_01.py">SP - grafika żółwia (turtle)</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <div class="row">
+        <div class="lg-12" style="min-height: 50vh">
+            <div id="instruction"></div>
         </div>
+    </div>
+
+</div>
 
 
-
-
+<div class="container">
 <hr>
-		<div class="well">Adam Jurkiewicz - haker edukacji, członek nieformalnej grupy <a href='http://superbelfrzy.edu.pl' target='_blank' class='url'>SuperbelfrzyRP</a>. Absolwent kursów Massachusetts Institute of Technology oraz IBM Professional Data Science z języka programowania Python.</p>
+		<div class="well">
+            Adam Jurkiewicz - haker edukacji, członek nieformalnej grupy <a href='http://superbelfrzy.edu.pl' target='_blank' class='url'>SuperbelfrzyRP</a>. Absolwent kursów Massachusetts Institute of Technology oraz IBM Professional Data Science z języka programowania Python.</p>
 		<p>Zdobywca wyróżnienia Szerokiego Porozumienia na Rzecz Umiejętności Cyfrowych Polsce, trener języka programowania Python, robotyki, mechatroniki, technologii komputerowych ze szczególnym uwzględnieniem otwartych zasobów edukacyjnych oraz oprogramowania OpenSource. Programista, administrator systemów UNIX/Linux, twórca remiksu edukacyjnego FREE_Desktop - remiksu systemu operacyjnego dla wolnych ludzi, legalnego i darmowego dla wszystkich - dostępnego na stronie <a href='http://free-desktop.pl' target='_blank' class='url'>http://free-desktop.pl</a>  </p>
 		<p>Współautor treści z języka Python w projekcie E-Podręczniki do kształcenia ogólnego dla klas ponadgimnazjalnych.</p>
 		<p>Twórca i prowadzący portal <a href='https://python.szkola.pl' target='_blank' class='url'>https://python.szkola.pl</a> - zajmuje się tam wsparciem dla nauczycieli informatyki i oswajaniem Pythona w szkołach. Pisze scenariusze lekcji, darmowe oprogramowanie, inspiracje i kursy dla początkujących. </p>
 
         </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://pagecdn.io/lib/ace/1.4.12/ace.js"></script>
     <script src="https://pagecdn.io/lib/ace/1.4.12/snippets/python.min.js"></script>
