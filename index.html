@@ -19,61 +19,30 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 
     <style>
         #editor {
             min-height: 300px;
             height: auto;
             max-height: 60%;
-            font-size: 2rem;
+            font-size: 1.3rem;
         }
         pre {
-            font-size: 1.7rem;
+            font-size: 1.2rem;
         }
         #instruction {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            background-color: #eee;
+        }
+        #mycanvas {
+            background-color: #eee;
         }
         img {
             border-radius: 5%;
             }
     </style>
-
-
-    <style>
-    /* Tooltip.. */
-    div.photo-container {
-        height: auto;
-        position: relative;
-        margin: 1.563em auto;
-    }
-
-    div.photo-container a {
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
-        font-weight: normal;
-    }
-
-    div.photo-container a span {
-        visibility: hidden;
-        position: absolute;
-        left: 1em;
-        top: -2.3em;
-        background: #ffff6b;
-        width: 17em;
-        border: 1px solid #404040;
-        font-size: 0.8em;
-        padding: 0.3em;
-        cursor: default;
-        line-height: 1.4;
-    }
-
-    div.photo-container a:hover span {
-        visibility: visible;
-    }
-        </style>
-
 
     <!--- Google schema --->
     <script type="application/ld+json">{
@@ -92,61 +61,41 @@
     "vatID": "5221172854",
     "image": "https://python.abixedukacja.eu/fd2021_python.png"
     }</script>
+
 </head>
 <body>
 
-    <div class="container-fluid">
-        <div class="py-2 w-100 text-left">
-	    &nbsp;<br>
-        <div class="photo-container">
-	    <a href="https://github.com/ABIX-Edukacja/python3_web" target="_blank"><img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_gray_6d6d6d.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"><span>Github</span></a>
-	    <a href="https://abixedukacja.eu" target="_blank"><img src="./logo.png" height="149" alt="logo"><span>Firma twórcy strony</span></a>
-	    <a href="https://edu-sense.com/pl/produkty/koduj-w-pythonie-tworzymy-gre-przygodowa" target="_blank"><img src="./okladka.jpg" height="149" alt="logo"><span>Książka do nauki programowania</span></a>
-	    <a href="https://python.szkola.pl" target="_blank"><img src="./Python-logo-notext.svg" height="149" alt="logo"><span>Serwis dla nauczycieli</span></a>
-        <a href="https://pracowniainformatyczna.pl" target="_blank"><img src="./free_server_fb.jpg" height="149" alt="logo"><span>Pracownia informatyczna dla szkół</span></a>
- <hr>
-        </div>
-        <div class="row h-100">
+<div class="container-fluid">
+    <div class="py-2">
 
-            <div class="col-lg-9 col-12" style="min-height: 50vh">
-                <div class="row">
-                    <div class="col-lg-6 col-12 h-100">
-			            <h4>Edytor - tu wpisujesz swój kod:</h4>
+	    <a href="https://github.com/ABIX-Edukacja/python3_web" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Fork me on GitHub">
+            <img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_gray_6d6d6d.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+	    <a href="https://abixedukacja.eu" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Firma twórcy strony">
+            <img src="./pygame.png" height="149" alt="Firma twórcy strony"></a>
+        <a href="https://abixedukacja.eu" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Firma twórcy strony">
+            <img src="./skulpt.png" height="149" alt="Firma twórcy strony"></a>
+	    <a href="https://edu-sense.com/pl/produkty/koduj-w-pythonie-tworzymy-gre-przygodowa" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Książka do nauki programowania">
+            <img src="./okladka.jpg" height="149" alt="Książka do nauki programowania"></a>
+	    <a href="https://python.szkola.pl" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Serwis dla nauczycieli">
+            <img src="./Python-logo-notext.svg" height="149" alt="Serwis dla nauczycieli"></a>
+        <a href="https://pracowniainformatyczna.pl" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Pracownia informatyczna dla szkół">
+            <img src="./free_server_fb.jpg" height="149" alt="Pracownia informatyczna dla szkół"></a>
+    <hr>
+    </div>
+</div>
 
-     
-
-                        <div id="editorsplace" class="h-100">
-                            <pre id="editor" style="border: 1px solid black;"></pre>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-12" style="min-height: 50vh">
-                        <h4>Mycanvas - tu zobaczysz efekty działania:</h4>
-
-                        <div id="mycanvas"></div>
-                        <pre class="text-left h-100">
-                            <code id="output">&nbsp;</code>
-                        </pre>
-                    </div>
-
-            
-                </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-1">&nbsp;</div>
+        <div class="col-lg-5 col-12 h-100">
+			<h4>Edytor &#8211; tu wpisujesz swój kod:</h4>
+            <div id="editorsplace" class="h-100">
+                <pre id="editor" style="border: 1px solid black;"></pre>
             </div>
-
-            <div class="col-lg-3 col-12" style="min-height: 50vh">
-                <div id="instruction"></div>
-
-
-            </div>
-
-        </div>
-
-
-        <div class="w-100 text-center">
-            <button class="btn btn-primary text-light" id="runbutton">Wykonaj aktualny kod <i class="fa fa-play" aria-hidden="true"></i></button>
-            <div class="btn-group">
-                <div class="btn-group dropup">
-                    <button type="button" class="btn btn-small btn-default dropdown-toggle" data-toggle="dropdown">
+            <div class="row">
+                <div class="col-sm-6">
+                <div class="btn-group dropup float-sm-left my-3">
+                    <button type="button" class="btn btn-small btn-default btn-info dropdown-toggle" data-toggle="dropdown">
                         Wybierz zadanie (Plik)
                         <span class="caret"></span>
                     </button>
@@ -167,32 +116,65 @@
                             <a href="?sp_choinka.py">SP - wykorzystujemy pętlę do rysowania</a>
                         </li>
                         <li class="dropdown-link">
-                            <a href="?sp_prostokat.py">SP - podstawowe wczytujemy dane z klawiatury i obliczamy</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_prostokat_02.py">SP - podstawowe wczytujemy dane z klawiatury, sprawdzamy typ i obliczamy</a>
+                            <a href="?sp_prostokat_01.py">SP - podstawowe wczytujemy dane z klawiatury i obliczamy</a>
                         </li>
                         <li class="dropdown-link">
                             <a href="?sp_turtle_01.py">SP - grafika żółwia (turtle)</a>
                         </li>
                     </ul>
+                </div> <!-- end of btn-group -->
                 </div>
+                <div class="col-sm-6">
+                    <button class="btn btn-primary text-light float-sm-right my-3" id="runbutton">Wykonaj kod <i class="fa fa-play" aria-hidden="true"></i></button>
+                </div>
+            </div> <!-- end of buttons -->
+        </div> <!-- end of col -->
+
+        <div class="col-lg-5 col-12">
+            <h4>Mycanvas &#8211; tu zobaczysz efekty działania:</h4>
+            <div id="mycanvas" class="rounded p-2">
+                <pre class="text-left">
+                    <code id="output">&nbsp;</code>
+                </pre>
             </div>
         </div>
+        <div class="col-lg-1 col-0">&nbsp;</div>
+    </div> <!-- end of row -->
 
-
-
-
-<hr>
-		<div class="well">Adam Jurkiewicz - haker edukacji, członek nieformalnej grupy <a href='http://superbelfrzy.edu.pl' target='_blank' class='url'>SuperbelfrzyRP</a>. Absolwent kursów Massachusetts Institute of Technology oraz IBM Professional Data Science z języka programowania Python.</p>
-		<p>Zdobywca wyróżnienia Szerokiego Porozumienia na Rzecz Umiejętności Cyfrowych Polsce, trener języka programowania Python, robotyki, mechatroniki, technologii komputerowych ze szczególnym uwzględnieniem otwartych zasobów edukacyjnych oraz oprogramowania OpenSource. Programista, administrator systemów UNIX/Linux, twórca remiksu edukacyjnego FREE_Desktop - remiksu systemu operacyjnego dla wolnych ludzi, legalnego i darmowego dla wszystkich - dostępnego na stronie <a href='http://free-desktop.pl' target='_blank' class='url'>http://free-desktop.pl</a>  </p>
-		<p>Współautor treści z języka Python w projekcie E-Podręczniki do kształcenia ogólnego dla klas ponadgimnazjalnych.</p>
-		<p>Twórca i prowadzący portal <a href='https://python.szkola.pl' target='_blank' class='url'>https://python.szkola.pl</a> - zajmuje się tam wsparciem dla nauczycieli informatyki i oswajaniem Pythona w szkołach. Pisze scenariusze lekcji, darmowe oprogramowanie, inspiracje i kursy dla początkujących. </p>
-
+    <div class="row">
+        <div class="col-lg-1">&nbsp;</div>
+        <div class="col-lg-10 rounded mt-3">
+            <div id="instruction" class="p-3"></div>
         </div>
+        <div class="col-lg-1">&nbsp;</div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</div>
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col-lg-1">&nbsp;</div>
+	<div class="col-lg-10 well">
+        <hr>
+        <p>Adam Jurkiewicz - haker edukacji, członek nieformalnej grupy <a href='http://superbelfrzy.edu.pl' target='_blank' class='url'>SuperbelfrzyRP</a>. Absolwent kursów Massachusetts Institute of Technology oraz IBM Professional Data Science z języka programowania Python.</p>
+    	<p>Zdobywca wyróżnienia Szerokiego Porozumienia na Rzecz Umiejętności Cyfrowych Polsce, trener języka programowania Python, robotyki, mechatroniki, technologii komputerowych ze szczególnym uwzględnieniem otwartych zasobów edukacyjnych oraz oprogramowania OpenSource. Programista, administrator systemów UNIX/Linux, twórca remiksu edukacyjnego FREE_Desktop - remiksu systemu operacyjnego dla wolnych ludzi, legalnego i darmowego dla wszystkich - dostępnego na stronie <a href='http://free-desktop.pl' target='_blank' class='url'>http://free-desktop.pl</a>  </p>
+    	<p>Współautor treści z języka Python w projekcie E-Podręczniki do kształcenia ogólnego dla klas ponadgimnazjalnych.</p>
+    	<p>Twórca i prowadzący portal <a href='https://python.szkola.pl' target='_blank' class='url'>https://python.szkola.pl</a> - zajmuje się tam wsparciem dla nauczycieli informatyki i oswajaniem Pythona w szkołach. Pisze scenariusze lekcji, darmowe oprogramowanie, inspiracje i kursy dla początkujących. </p>
+    </div>
+    <div class="col-lg-1">&nbsp;</div>
+</div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
     <script src="https://pagecdn.io/lib/ace/1.4.12/ace.js"></script>
     <script src="https://pagecdn.io/lib/ace/1.4.12/snippets/python.min.js"></script>
