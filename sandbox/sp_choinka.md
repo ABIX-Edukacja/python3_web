@@ -12,7 +12,7 @@ Pętlę w języku python zapisujemy w następujący sposób:
 ```python
 # poniższy kod wypisze 10 cyfr, od 0 do 9
 for x in range(10):
-    print(i)
+    print(x)
 ```
 
 2) Wersja z użyciem opratora `in`, który pozwala iterować elementy kolekcji, np. listy lub napisu
