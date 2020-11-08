@@ -29,12 +29,17 @@
             max-height: 60%;
             font-size: 1.3rem;
         }
+        h2 {
+            font-size: 1.6rem;
+        }
         pre {
             font-size: 1.2rem;
         }
+        .bg-grey {
+            background-color: #eee;
+        }
         #instruction {
             font-size: 1.2rem;
-            background-color: #eee;
         }
         #mycanvas {
             background-color: #eee;
@@ -42,6 +47,14 @@
         img {
             border-radius: 5%;
             }
+        .dropup {
+            position:static !important;
+        }
+        .dropdown-menu {
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
+            margin-bottom:0px !important;
+            width:100% !important;
+        }
     </style>
 
     <!--- Google schema --->
@@ -84,14 +97,17 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-1">&nbsp;</div>
-        <div class="col-lg-5 col-12 h-100">
-			<h4>Edytor &#8211; tu wpisujesz swój kod:</h4>
+        <div class="col-lg-6 col-12 h-100 pl-lg-5">
+            <div class="card">
+                <div class="card-header">
+			         <h5>Edytor &#8211; tu wpisujesz swój kod:</h5>
+                </div>
+            </div> <!-- end of card -->
             <div id="editorsplace" class="h-100">
                 <pre id="editor" style="border: 1px solid black;"></pre>
             </div>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-9 col-lg-12 col-xl-9">
                 <div class="btn-group dropup float-sm-left my-3">
                     <button type="button" class="btn btn-small btn-default btn-info dropdown-toggle" data-toggle="dropdown">
                         Wybierz zadanie (Plik)
@@ -125,29 +141,35 @@
                     </ul>
                 </div> <!-- end of btn-group -->
                 </div>
-                <div class="col-sm-6">
-                    <button class="btn btn-primary text-light float-sm-right my-3" id="runbutton">Wykonaj kod <i class="fa fa-play" aria-hidden="true"></i></button>
+                <div class="col-sm-3 col-lg-12 col-xl-3">
+                    <button class="btn btn-primary text-light float-sm-right float-lg-left float-xl-right my-3 my-lg-0 my-xl-3" id="runbutton">Wykonaj kod <i class="fa fa-play" aria-hidden="true"></i></button>
                 </div>
             </div> <!-- end of buttons -->
         </div> <!-- end of col -->
 
-        <div class="col-lg-5 col-12">
-            <h4>Mycanvas &#8211; tu zobaczysz efekty działania:</h4>
-            <div id="mycanvas" class="rounded p-2">
-                <pre class="text-left">
-                    <code id="output">&nbsp;</code>
-                </pre>
+        <div class="col-lg-6 col-12 pr-lg-5">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Mycanvas &#8211; tu zobaczysz efekty działania:</h5>
+                </div>
+                <div id="mycanvas" class="rounded p-2">
+                    <pre id="output"></pre>
+                </div>
             </div>
         </div>
-        <div class="col-lg-1 col-0">&nbsp;</div>
     </div> <!-- end of row -->
 
     <div class="row">
-        <div class="col-lg-1">&nbsp;</div>
-        <div class="col-lg-10 rounded mt-3">
-            <div id="instruction" class="p-3"></div>
+        <div class="col-12 rounded mt-3 p-5 bg-grey">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Jak to działa?</h5>
+                </div>
+                <div class="card-body">
+                    <div id="instruction"></div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-1">&nbsp;</div>
     </div>
 
 </div>
@@ -155,15 +177,19 @@
 
 <div class="container-fluid">
 <div class="row">
-    <div class="col-lg-1">&nbsp;</div>
-	<div class="col-lg-10 well">
-        <hr>
-        <p>Adam Jurkiewicz - haker edukacji, członek nieformalnej grupy <a href='http://superbelfrzy.edu.pl' target='_blank' class='url'>SuperbelfrzyRP</a>. Absolwent kursów Massachusetts Institute of Technology oraz IBM Professional Data Science z języka programowania Python.</p>
-    	<p>Zdobywca wyróżnienia Szerokiego Porozumienia na Rzecz Umiejętności Cyfrowych Polsce, trener języka programowania Python, robotyki, mechatroniki, technologii komputerowych ze szczególnym uwzględnieniem otwartych zasobów edukacyjnych oraz oprogramowania OpenSource. Programista, administrator systemów UNIX/Linux, twórca remiksu edukacyjnego FREE_Desktop - remiksu systemu operacyjnego dla wolnych ludzi, legalnego i darmowego dla wszystkich - dostępnego na stronie <a href='http://free-desktop.pl' target='_blank' class='url'>http://free-desktop.pl</a>  </p>
-    	<p>Współautor treści z języka Python w projekcie E-Podręczniki do kształcenia ogólnego dla klas ponadgimnazjalnych.</p>
-    	<p>Twórca i prowadzący portal <a href='https://python.szkola.pl' target='_blank' class='url'>https://python.szkola.pl</a> - zajmuje się tam wsparciem dla nauczycieli informatyki i oswajaniem Pythona w szkołach. Pisze scenariusze lekcji, darmowe oprogramowanie, inspiracje i kursy dla początkujących. </p>
+	<div class="col-12 p-5">
+        <div class="card">
+            <div class="card-header">
+                O autorze
+            </div>
+            <div class="card-body">
+            <p>Adam Jurkiewicz - haker edukacji, członek nieformalnej grupy <a href='http://superbelfrzy.edu.pl' target='_blank' class='url'>SuperbelfrzyRP</a>. Absolwent kursów Massachusetts Institute of Technology oraz IBM Professional Data Science z języka programowania Python.</p>
+        	<p>Zdobywca wyróżnienia Szerokiego Porozumienia na Rzecz Umiejętności Cyfrowych Polsce, trener języka programowania Python, robotyki, mechatroniki, technologii komputerowych ze szczególnym uwzględnieniem otwartych zasobów edukacyjnych oraz oprogramowania OpenSource. Programista, administrator systemów UNIX/Linux, twórca remiksu edukacyjnego FREE_Desktop - remiksu systemu operacyjnego dla wolnych ludzi, legalnego i darmowego dla wszystkich - dostępnego na stronie <a href='http://free-desktop.pl' target='_blank' class='url'>http://free-desktop.pl</a>  </p>
+        	<p>Współautor treści z języka Python w projekcie E-Podręczniki do kształcenia ogólnego dla klas ponadgimnazjalnych.</p>
+        	<p>Twórca i prowadzący portal <a href='https://python.szkola.pl' target='_blank' class='url'>https://python.szkola.pl</a> - zajmuje się tam wsparciem dla nauczycieli informatyki i oswajaniem Pythona w szkołach. Pisze scenariusze lekcji, darmowe oprogramowanie, inspiracje i kursy dla początkujących. </p>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-1">&nbsp;</div>
 </div>
 </div>
 
