@@ -50,11 +50,6 @@
         .dropup {
             position:static !important;
         }
-        .dropdown-menu {
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
-            margin-bottom:0px !important;
-            width:100% !important;
-        }
     </style>
 
     <!--- Google schema --->
@@ -103,44 +98,32 @@
 			         <h5>Edytor &#8211; tu wpisujesz swój kod:</h5>
                 </div>
             </div> <!-- end of card -->
-            <div id="editorsplace" class="h-100">
+
+	    <div id="editorsplace" class="h-100">
                 <pre id="editor" style="border: 1px solid black;"></pre>
             </div>
             <div class="row">
                 <div class="col-sm-9 col-lg-12 col-xl-9">
-                <div class="btn-group dropup float-sm-left my-3">
-                    <button type="button" class="btn btn-small btn-default btn-info dropdown-toggle" data-toggle="dropdown">
-                        Wybierz zadanie (Plik)
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-link">
-                            <a href="?00_empty.py">Przykładowy plik</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?00_start_python3.py">Zupełnie pusty szablon</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_print_01.py">SP - podstawowy print</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_zmienne_01.py">SP - podstawowe zmienne i typy</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_choinka.py">SP - wykorzystujemy pętlę do rysowania</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_prostokat.py">SP - podstawowe wczytujemy dane z klawiatury i obliczamy</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_prostokat_02.py">SP - podstawowe wczytujemy dane z klawiatury i obliczamy - wersja alternatywna</a>
-                        </li>
-                        <li class="dropdown-link">
-                            <a href="?sp_turtle_01.py">SP - grafika żółwia (turtle)</a>
-                        </li>
-                    </ul>
+
+
+	    <div class="btn-group dropup">
+		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		Wybierz zadanie (Plik)
+	    </button>
+		    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="?00_empty.py">Przykładowy plik</a>
+                        <a class="dropdown-item" href="?00_start_python3.py">Zupełnie pusty szablon</a>
+			            <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="?sp_print_01.py">SP - podstawowy print</a>
+                        <a class="dropdown-item" href="?sp_zmienne_01.py">SP - podstawowe zmienne i typy</a>
+                        <a class="dropdown-item" href="?sp_choinka.py">SP - wykorzystujemy pętlę do rysowania</a>
+                        <a class="dropdown-item" href="?sp_prostokat.py">SP - podstawowe wczytujemy dane z klawiatury i obliczamy</a>
+                        <a class="dropdown-item" href="?sp_prostokat_02.py">SP - podstawowe wczytujemy dane z klawiatury i obliczamy - wersja alternatywna</a>
+                        <a class="dropdown-item" href="?sp_turtle_01.py">SP - grafika żółwia (turtle)</a>
+                    </div>
                 </div> <!-- end of btn-group -->
                 </div>
+
                 <div class="col-sm-3 col-lg-12 col-xl-3">
                     <button class="btn btn-primary text-light float-sm-right float-lg-left float-xl-right my-3 my-lg-0 my-xl-3" id="runbutton">Wykonaj kod <i class="fa fa-play" aria-hidden="true"></i></button>
                 </div>
