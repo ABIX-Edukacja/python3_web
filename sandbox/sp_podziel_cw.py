@@ -15,6 +15,8 @@ def test_podzielnosci(liczba):
 
 
 # testy
+print("Testy wykonania:")
+print("Wartość oczekiwana -> Wartość obliczona.")
 print("False ->", test_podzielnosci("Nic"))
 print("False ->", test_podzielnosci(3.14))
 print("[3] ->", test_podzielnosci(33))
