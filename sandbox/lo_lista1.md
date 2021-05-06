@@ -3,7 +3,8 @@
 Naszym zadaniem jest policzenie unikatowych wystąpień liczb w liście (tablicy) i podanie, która liczba występuje najwięcej, a która najmniej razy.
 
 Przede wszystkim musimy sprawdzić unikatowe liczby występujące w liście - wykonamy to za pomocą stworzenia zbioru w Pythonie:
-```
+
+```python
 lista = [1,6,3,4,3,2,2,2,2,3,5,5,3,3,3,1,1,1,5,5,5,5,5,5,54,54,6,6,6,6,6,3,3,
         3,3,4,4,4,4,44,4,2,2,3,3,3,2,2,23,3,1,1,1,5,5,1,6,3,4,3,2,2,2,2,3,5,5,
         3,3,3,1,1,1,1,6,3,4,3,23,2,2,2,3,5,5,3,3,3,1,1,1,1,6,3,4,3,2,2,2,2,3,5,
