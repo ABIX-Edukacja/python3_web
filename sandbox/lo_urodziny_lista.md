@@ -10,9 +10,9 @@ Następnie wykorzystujemy pętlę `for`, aby iterować po wszystkich elementach 
 if imie[-1:] == "a":
 ```
 
-Taki zapis nazywamy `slice` lub `wycinkiem`. W języku Python możemy odnosić się do typu `string` tak jak do innych kolekcji. Więcej na ten temat https://docs.python.org/3/tutorial/introduction.html#strings
+Taki zapis nazywamy `slice` lub `wycinkiem`. W języku Python możemy odnosić się do typu `string` tak jak do innych kolekcji. Więcej na ten temat [https://docs.python.org/3/tutorial/introduction.html#strings](https://docs.python.org/3/tutorial/introduction.html#strings)
 
-Ogólnie o pętlach możemy przeczytać: https://pl.wikipedia.org/wiki/P%C4%99tla_(informatyka)
+Ogólnie o pętlach możemy przeczytać: [https://pl.wikipedia.org/wiki/P%C4%99tla_(informatyka)](https://pl.wikipedia.org/wiki/P%C4%99tla_(informatyka))
 
 ----
 
