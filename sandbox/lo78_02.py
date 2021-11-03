@@ -7,7 +7,7 @@ actual_year = 2021
 print("Hi, we'll try to compute your age ;-)")
 name = input("Please tell me your name:")
 birth = input(f"OK {name} - at what year have you birth?")
-print(f"Now birth is a {type(birth)}")
+print(f"Now birth is a {type(birth)} => {birth}")
 # Uwaga - poniżej następuje zmiana typu na int - liczbę całkowitą !!!!!!
 birth = int(birth)
 print(f"Now birth is a {type(birth)} - after using int() function.")
