@@ -8,6 +8,15 @@ W tym miejscu możesz spokojnie testować dowolne swoje projekty. Pamiętajmy o 
 * znaki dwukropka oznaczają, że nastąpi blok kodu, np. dla definicji funkcji, instrukcji warunkowej, pętli
 
 ----
+## Python – interpretowany język programowania
+
+Języki interpretowane ułatwiają pisanie aplikacji przenośnych, zgodnych z wieloma platformami sprzętowymi i systemowymi. Programy takie mają często postać kodu źródłowego, który jest
+uruchamiany za pośrednictwem interpretera. Dla odmiany, programy kompilowane są zamieniane z zapisu w kodzie źródłowym na kod maszynowy. Jest on specyﬁczny dla konkretnego systemu
+operacyjnego oraz sprzętu (dotyczy to zwłaszcza procesorów).
+
+**Python to język programowania ogólnego przeznaczenia**, jego składnia jest zbliżona do naturalnego języka. Jest często używany jako język skryptowy (gdzie wykonywany program jest w wersji źródłowej) i uruchamiany na serwerach. Python jest dostępny na wiele systemów operacyjnych; często wykorzystywany jest w urządzeniach gromadzących i przetwarzających dane, jak np. inteligentny budynek czy stacje pogodowe.
+
+----
 
 Zawsze możemy pobrać i zainstalować lokalnie Pythona i w środowisku IDLE sprawdzić szybką pomoc, np.:
 
