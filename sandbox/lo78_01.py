@@ -14,7 +14,7 @@ circle_radius = 6
 print("Hi, I want to compute some things!")
 circle_area = pi * circle_radius ** 2
 
-# wypisujemy na ekranie stosijąc konwencję F-String
+# wypisujemy na ekranie stosując konwencję F-String
 print(f"Area is {circle_area}")
 
 # wypisujemy informacje o typie danych:
